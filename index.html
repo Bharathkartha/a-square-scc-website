@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Company</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #450000; /* Maroon shade */
+        }
+        header {
+            background-color: #4B2E83;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0px 0px;
+            height: 100px;
+        }
+        header img {
+            height: 100px;
+            margin-right: 15px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            height: 350px;
+            overflow: hidden;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        .motto, .contact {
+            padding: 20px;
+            text-align: center;
+        }
+        .motto {
+            background-color: #F5F5F5;
+        }
+        .contact {
+            background-color: #4B2E83;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Banner -->
+    <header>
+        <img src="logo.png" alt="Company Logo">
+        
+    </header>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <img class="slides" src="slide_pic_1.jpg" alt="Slide 1">
+        <img class="slides" src="slide_pic_2.jpg" alt="Slide 2">
+        <img class="slides" src="slide_pic_3.jpg" alt="Slide 3">
+    </div>
+
+    <!-- Motto Section -->
+    <section class="motto">
+        <h2>Our Motto</h2>
+        <p>“Delivering your goods with speed, safety, and reliability — across the globe.”</p>
+    </section>
+
+    <!-- Contact Details -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: inquiry@asquare-logistics.com</p>
+        <p>Phone: +49 123 456 789</p>
+        <p>Address: 123 Logistics Street, Cherthala, Alappuzha, Kerala</p>
+    </section>
+
+    <!-- Slideshow Script -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change every 3 seconds
+        }
+    </script>
+
+</body>
+</html>
